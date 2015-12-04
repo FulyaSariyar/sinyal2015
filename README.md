@@ -1,4 +1,4 @@
 FULYA SARIYAR
 030113010
-SÝNYAL ÝSLEME 
+sinyal isleme
 Proje:MATLAB ile sentezleme
