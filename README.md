@@ -1,0 +1,4 @@
+FULYA SARIYAR
+030113010
+SÝNYAL ÝSLEME 
+Proje:MATLAB ile sentezleme
