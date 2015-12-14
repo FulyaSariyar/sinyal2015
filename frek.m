@@ -29,6 +29,6 @@ switch nota %girilen notaya göre deger (Örn: Do 1, C# 2, vb..)
         Nota=NULL;%girilen nota yoksa NULL döndürür.
         
 end
-frekans=f0*2^((oktav-4)+(Nota-10)/12);%nota tablosundaki frekanslar arasý iliþkinin matematiksel formülüdür.
+frekans=f0*2^((oktav-4)+(Nota-10)/12);%nota tablosundaki frekanslar arasi iliskinin matematiksel formülüdür.
                                       %f0=440 temel frekansdir.
 end
