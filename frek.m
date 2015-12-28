@@ -1,9 +1,9 @@
 function [ frekans ] = frek( nota, oktav )
 f0=440; %Temel frekans(referans) degeri La4
-if nargin == 1 
+if nargin == 1; 
     oktav = '4';% oktav degeri verilmemisse 4. oktav kabul eder.
 end
-switch nota %girilen notaya göre deger (Örn: Do 1, C# 2, vb..)
+switch nota %girilen notaya göre deger 
         case 'Do'
         Nota=1;
         case 'Dod'
@@ -31,7 +31,7 @@ switch nota %girilen notaya göre deger (Örn: Do 1, C# 2, vb..)
         case 'sus'
         Nota=13;
         if Nota==13
-            frekans=NULL;
+            frekans=NULL;%Nota degeri 13 oldugu zaman frekans NULL döndürülür.
         end
     otherwise 
         Nota=NULL;%girilen nota yoksa NULL döndürür.
