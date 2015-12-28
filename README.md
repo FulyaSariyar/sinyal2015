@@ -4,20 +4,23 @@ sinyal isleme
 Proje:MATLAB ile sentezleme
 
 
-2.Hafta 
+
+notalar.png:Ýsleyecegim müzik notalarinin görseli bulunmaktadir.
 
 
-frek.m adinda bir dosya olusturdum. Dosyanin icerisinde frek fonksiyonu bulunmaktadir.
-Verilen tablodaki notalarin frekanslari arasindaki iliski matematiksel olarak soyledir:
-
+frek.m:Notalar ile oktavlar arasindaki iliskiyi hesaplayan fonksiyon bulunmaktadir.
 
 fn=referans*2^((oktav-4)+(Nota-10)/12)
 
-
 fn:frekans
-
 
 referans: f0 yani La4=440
 
 
-note.m adinda bir dosya olusturmustum bu hafta icerisine note adinda sinüs sinyali donduren fonksiyonu yazdim.
+note.m:Disaridan aldigi parametrelere göre sinüs sinyali döndürür ve icerisinde sinüs sinyali zarflanmistir.
+
+
+notalar.txt:Ýcerisinde nota,oktav,ölcü bilgileri bu sirada bulunmaktadir.
+
+
+sentez.m:Müzigin sentezlendigi dosyadir.
