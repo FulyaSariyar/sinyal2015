@@ -1,14 +1,14 @@
-function [xx,tt]=note(frekans,vurus)
-fs=8192;
-tt=0:1/fs:vurus;
-xx=sin(2*pi*frekans*tt);
-t1=0:1/fs:2*vurus/8;
-x1=3/2*sin(2*pi*frekans*t1)
-t2=2*vurus/8:1/fs:3*vurus/8
-x2=2/3*sin(2*pi*frekans*t2)
-t3=3*vurus/8:1/fs:7*vurus/8
-x3=1
-t4=7*vurus/8:1/fs:8*vurus/8
-x4=sin(2*pi*frekans*t4)
+function [xx,tt] = note(frekans,vurus)
+    fs=8192;%ornekleme frekansi
+    tt=0:1/fs:vurus; 
+    
+    A=[linspace(0,1.5,2*fs*vurus/8),...;%attack süresi
+    linspace(1.5,1,fs*vurus/8),...;     %decay süresi   
+    linspace(1,1,4*fs*vurus/8),...;     %sustain süresi
+    linspace(1,0,fs*vurus/8+1)];        %release süresi  
 
+    xx=A.*sin(2*pi*frekans*tt);%A vektörü sinüs sinyali ile carpilarak zarfa sokulmus oluyor.
+                  
+   
+    
 end
