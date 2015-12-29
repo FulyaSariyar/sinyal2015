@@ -25,4 +25,16 @@ oktav=x(2); %2. string (oktav)
 olcu=x(3);  %3. string (olcu)
 frekans=frek(nota,oktav);    %frekans frek fonksiyonu ile hesaplanir.
 sinyal=note(frekans,olcu);   %sinüs sinyali (note.m'deki)
-notalar=[notalar sinyal dz]; %notalar matrisi
+notalar=[notalar sinyal dz]; %notalar matrisi ve her biri icin sinüs sinyali olusturuldu.
+
+
+a=10;
+g=linspace(1/Fs,a,a*Fs); %gecikme zamani
+y=zeros(1,Fs*a);%veriler baslangic durumuna getirilir.
+for n=1:length(notalar)
+    y=y+notalar(n)*0.3; %genlik (%30) oraninda düþürülür ve kendisi ile toplanir.
+end
+y = y/max(y); %sinyalin tepe degeri 1'e normalize edilir.
+plot(notalar);
+soundsc(notalar,fs);
+
